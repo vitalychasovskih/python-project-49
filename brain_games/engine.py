@@ -62,3 +62,17 @@ def br_calc():
         calc_perfect_answer = number_1 * number_2
         calc_question = f'Question: {number_1} * {number_2}'
     return calc_description, calc_question, calc_perfect_answer
+
+
+def br_gcd():
+    gcd_description = 'Find the greatest common divisor of given numbers.'
+    number_1 = random.randrange(100)
+    number_2 = random.randrange(100)
+    gcd_question = f'Question: {number_1} {number_2}'
+    while number_1 != 0 and number_2 != 0:
+        if number_1 > number_2:
+            number_1 = number_1 % number_2
+        else:
+            number_2 = number_2 % number_1
+    gcd_perfect_answer = number_1 + number_2
+    return gcd_description, gcd_question, gcd_perfect_answer
