@@ -76,3 +76,18 @@ def br_gcd():
             number_2 = number_2 % number_1
     gcd_perfect_answer = number_1 + number_2
     return gcd_description, gcd_question, gcd_perfect_answer
+
+
+def br_progression():
+    pr_description = 'What number is missing in the progression?'
+    length = random.randint(5, 10)
+    first_element = random.randint(1, 20)
+    step = random.randint(2, 7)
+    index_question = random.randrange(length)
+    result = []
+    for i in range(length):
+        result.append(first_element + i * step)
+    pr_perfect_answer = result.pop(index_question)
+    result.insert(index_question, '..')
+    pr_question = ('Question:', ' '.join([str(x) for x in result]))
+    return pr_description, pr_question, pr_perfect_answer
