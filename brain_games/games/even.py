@@ -1,31 +1,29 @@
-import random
-from .cli import welcom_user
-
+from brain_games.cli import welcom_user
+from brain_games.engine import show_description, show_question
+from brain_games.engine import cheking_the_answer
+from brain_games.engine import br_even
 
 print('Welcome to the Brain Games!')
 name = welcom_user()
 
 
 def is_number_even():
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    description, question, perfect_answer = br_even()
+    show_description(description)
     counter = 0
     while counter < 3:
-        number = random.randrange(100)
-        if number % 2 == 0:
-            perfect_answer = 'yes'
-        else:
-            perfect_answer = 'no'
-
-        print(f'Question: {number}')
+        description, question, perfect_answer = br_even()
+        show_question(question)
         answer = input('Your answer: ')
-        if answer != perfect_answer:
+        chek = cheking_the_answer(answer, perfect_answer)
+        if chek:
+            print("Correct!")
+            counter += 1
+            if counter == 3:
+                print(f"Congratulations, {name}!")
+        else:
             lost_message = f"'{answer}' is wrong answer ;(. "
             lost_message += f"Correct answer was '{perfect_answer}'."
             print(lost_message)
             print("Let's try again!")
             break
-        else:
-            print("Correct!")
-            counter += 1
-            if counter == 3:
-                print(f"Congratulations, {name}!")
