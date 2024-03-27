@@ -25,5 +25,5 @@ def is_number_even():
             lost_message = f"'{answer}' is wrong answer ;(. "
             lost_message += f"Correct answer was '{perfect_answer}'."
             print(lost_message)
-            print("Let's try again!")
+            print(f"Let's try again, {name}!")
             break
