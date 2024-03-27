@@ -89,7 +89,8 @@ def br_progression():
         result.append(first_element + i * step)
     pr_perfect_answer = result.pop(index_question)
     result.insert(index_question, '..')
-    pr_question = ('Question:', ' '.join([str(x) for x in result]))
+    pr_question = 'Question: '
+    pr_question += ' '.join([str(x) for x in result])
     return pr_description, pr_question, pr_perfect_answer
 
 
