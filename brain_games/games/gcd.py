@@ -23,8 +23,9 @@ def gcd():
             if counter == 3:
                 print(f"Congratulations, {name}!")
         else:
-            lost_message = f"'{answer}' is wrong answer ;(. "
-            lost_message += f"Correct answer was '{perfect_answer}'."
+            lost_message = (f"'{answer}' is wrong answer ;(. "
+                f"Correct answer was '{perfect_answer}'."
+            )
             print(lost_message)
             print(f"Let's try again, {name}!")
             break
