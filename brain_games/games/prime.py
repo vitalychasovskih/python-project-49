@@ -23,7 +23,8 @@ def prime():
             if counter == 3:
                 print(f"Congratulations, {name}!")
         else:
-            lost_message = (f"'{answer}' is wrong answer ;(. "
+            lost_message = (
+                f"'{answer}' is wrong answer ;(. "
                 f"Correct answer was '{perfect_answer}'."
             )
             print(lost_message)
