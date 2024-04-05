@@ -1,11 +1,15 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "'Math Brain Games' is a set of five console games."
 authors = ["Vitaly Chasovskikh"]
 readme = "README.md"
 packages = [
   { include = "brain_games" },
+]
+repository = "https://github.com/vitalychasovskih/python-project-49"
+classifiers = [
+    "Private :: Do Not Upload"
 ]
 
 [tool.poetry.dependencies]
