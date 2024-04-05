@@ -2,6 +2,7 @@ from brain_games.cli import welcom_user
 from brain_games.engine import show_description, show_question
 from brain_games.engine import cheking_the_answer
 from brain_games.engine import br_calc
+from brain_games.constants import NUMBER_OF_ROUNDS
 
 
 print('Welcome to the Brain Games!')
@@ -12,7 +13,7 @@ def calculation():
     description, question, perfect_answer = br_calc()
     show_description(description)
     counter = 0
-    while counter < 3:
+    while counter < NUMBER_OF_ROUNDS:
         description, question, perfect_answer = br_calc()
         show_question(question)
         answer = int(input('Your answer: '))
@@ -20,7 +21,7 @@ def calculation():
         if chek:
             print("Correct!")
             counter += 1
-            if counter == 3:
+            if counter == NUMBER_OF_ROUNDS:
                 print(f"Congratulations, {name}!")
         else:
             lost_message = (
