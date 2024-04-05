@@ -13,6 +13,7 @@ def is_number_even():
     description, question, perfect_answer = br_even()
     show_description(description)
     counter = 0
+    flag = True
     while counter < NUMBER_OF_ROUNDS:
         description, question, perfect_answer = br_even()
         show_question(question)
@@ -22,6 +23,7 @@ def is_number_even():
             print("Correct!")
             counter += 1
         else:
+            flag = False
             lost_message = (
                 f"'{answer}' is wrong answer ;(. "
                 f"Correct answer was '{perfect_answer}'."
@@ -29,4 +31,5 @@ def is_number_even():
             print(lost_message)
             print(f"Let's try again, {name}!")
             break
-    print(f"Congratulations, {name}!")
+    if flag:
+        print(f"Congratulations, {name}!")
