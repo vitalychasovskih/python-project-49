@@ -21,8 +21,6 @@ def is_number_even():
         if chek:
             print("Correct!")
             counter += 1
-            if counter == NUMBER_OF_ROUNDS:
-                print(f"Congratulations, {name}!")
         else:
             lost_message = (
                 f"'{answer}' is wrong answer ;(. "
@@ -31,3 +29,4 @@ def is_number_even():
             print(lost_message)
             print(f"Let's try again, {name}!")
             break
+    print(f"Congratulations, {name}!")
