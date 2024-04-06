@@ -56,11 +56,11 @@ Congratulations, Jon Snow!
 
 #### Python
 
-Before installing the package make sure you have Python version 3.8 or higher installed:
+Before installing the package make sure you have Python version 3.10 or higher installed:
 
 ```bash
 >> python --version
-Python 3.8.0+
+Python 3.10.0+
 ```
 
 #### Poetry
