@@ -16,4 +16,4 @@ def logic():
         else:
             number_2 = number_2 % number_1
     gcd_perfect_answer = number_1 + number_2
-    return gcd_question, gcd_perfect_answer
+    return gcd_question, str(gcd_perfect_answer)
