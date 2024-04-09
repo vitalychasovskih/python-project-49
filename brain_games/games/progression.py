@@ -18,4 +18,4 @@ def logic():
     result.insert(index_question, '..')
     pr_question = 'Question: '
     pr_question += ' '.join([str(x) for x in result])
-    return pr_question, pr_perfect_answer
+    return pr_question, str(pr_perfect_answer)
