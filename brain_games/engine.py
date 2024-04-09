@@ -1,4 +1,3 @@
-import random  # необходим для функций br_calc и br_even
 from brain_games.cli import welcom_user
 from brain_games.constants import NUMBER_OF_ROUNDS
 
