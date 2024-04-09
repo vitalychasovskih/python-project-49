@@ -1,9 +1,6 @@
 import random  # необходим для функций br_calc и br_even
-
-
-def welcom_user():
-    # уже описана в модуле brain_games.cli функция welcom_user
-    pass
+from brain_games.cli import welcom_user
+from brain_games.constants import NUMBER_OF_ROUNDS
 
 
 def show_description(description):
@@ -20,7 +17,7 @@ def show_question(question):
     print(question)
 
 
-def cheking_the_answer(answer, perfect_answer):
+def checking_the_answer(answer, perfect_answer):
     # нужно получить ответ пользователя и сравнить его с эталонным ответом
     # если ответ неправильный - вернуть False
     # если ответ верный - вернуть True
@@ -28,88 +25,35 @@ def cheking_the_answer(answer, perfect_answer):
 
 
 def round_result():
-    # нужно получить из функции cheking_the_answer() булево значение
+    # нужно получить из функции checking_the_answer() булево значение
     # если False - вывести сообщение о проигрыше
     # если True - увеличить счетчик на единицу
     # если счетчик набрал необходимое значение - вывести поздравление
     pass
 
 
-def br_even():
-    even_description = 'Answer "yes" if the number is even, '
-    even_description += 'otherwise answer "no".'
-    number = random.randrange(100)
-    if number % 2 == 0:
-        even_perfect_answer = 'yes'
-    else:
-        even_perfect_answer = 'no'
-    even_question = (f'Question: {number}')
-    return even_description, even_question, even_perfect_answer
-
-
-def br_calc():
-    calc_description = 'What is the result of the expression?'
-    number_1 = random.randrange(100)
-    number_2 = random.randrange(100)
-    operator = random.randrange(1, 4)
-    if operator == 1:
-        calc_perfect_answer = number_1 + number_2
-        calc_question = f'Question: {number_1} + {number_2}'
-    elif operator == 2:
-        calc_perfect_answer = number_1 - number_2
-        calc_question = f'Question: {number_1} - {number_2}'
-    else:
-        calc_perfect_answer = number_1 * number_2
-        calc_question = f'Question: {number_1} * {number_2}'
-    return calc_description, calc_question, calc_perfect_answer
-
-
-def br_gcd():
-    gcd_description = 'Find the greatest common divisor of given numbers.'
-    number_1 = random.randrange(100)
-    number_2 = random.randrange(100)
-    gcd_question = f'Question: {number_1} {number_2}'
-    while number_1 != 0 and number_2 != 0:
-        if number_1 > number_2:
-            number_1 = number_1 % number_2
+def brain_engine(game):
+    print('Welcome to the Brain Games!')
+    name = welcom_user()
+    show_description(game.description())
+    counter = 0
+    flag = True
+    while counter < NUMBER_OF_ROUNDS:
+        question, perfect_answer = game.logic()
+        show_question(question)
+        answer = input('Your answer: ')
+        check = checking_the_answer(answer, perfect_answer)
+        if check:
+            print("Correct!")
+            counter += 1
         else:
-            number_2 = number_2 % number_1
-    gcd_perfect_answer = number_1 + number_2
-    return gcd_description, gcd_question, gcd_perfect_answer
-
-
-def br_progression():
-    pr_description = 'What number is missing in the progression?'
-    length = random.randint(5, 10)
-    first_element = random.randint(1, 20)
-    step = random.randint(2, 7)
-    index_question = random.randrange(length)
-    result = []
-    for i in range(length):
-        result.append(first_element + i * step)
-    pr_perfect_answer = result.pop(index_question)
-    result.insert(index_question, '..')
-    pr_question = 'Question: '
-    pr_question += ' '.join([str(x) for x in result])
-    return pr_description, pr_question, pr_perfect_answer
-
-
-def isPrime(n):
-    if n % 2 == 0:
-        return n == 2
-    d = 3
-    while d * d <= n and n % d != 0:
-        d += 2
-    return d * d > n
-
-
-def br_prime():
-    prime_description = ('Answer "yes" if given number is prime. '
-                         'Otherwise answer "no".')
-    number = random.randrange(100)
-    if isPrime(number):
-        prime_perfect_answer = 'yes'
-    else:
-        prime_perfect_answer = 'no'
-    prime_question = f'Question: {number}'
-    return prime_description, prime_question, prime_perfect_answer
+            flag = False
+            lost_message = (
+                f"'{answer}' is wrong answer ;(. "
+                f"Correct answer was '{perfect_answer}'."
+            )
+            print(lost_message)
+            print(f"Let's try again, {name}!")
+            break
+    if flag:
+        print(f"Congratulations, {name}!")
