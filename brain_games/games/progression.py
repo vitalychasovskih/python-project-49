@@ -1,35 +1,21 @@
-from brain_games.cli import welcom_user
-from brain_games.engine import show_description, show_question
-from brain_games.engine import cheking_the_answer
-from brain_games.engine import br_progression
-from brain_games.constants import NUMBER_OF_ROUNDS
+import random
 
 
-print('Welcome to the Brain Games!')
-name = welcom_user()
+def description():
+    pr_description = 'What number is missing in the progression?'
+    return pr_description
 
 
-def progression():
-    description, question, perfect_answer = br_progression()
-    show_description(description)
-    counter = 0
-    flag = True
-    while counter < NUMBER_OF_ROUNDS:
-        description, question, perfect_answer = br_progression()
-        show_question(question)
-        answer = int(input('Your answer: '))
-        chek = cheking_the_answer(answer, perfect_answer)
-        if chek:
-            print("Correct!")
-            counter += 1
-        else:
-            flag = False
-            lost_message = (
-                f"'{answer}' is wrong answer ;(. "
-                f"Correct answer was '{perfect_answer}'."
-            )
-            print(lost_message)
-            print(f"Let's try again, {name}!")
-            break
-    if flag:
-        print(f"Congratulations, {name}!")
+def logic():
+    length = random.randint(5, 10)
+    first_element = random.randint(1, 20)
+    step = random.randint(2, 7)
+    index_question = random.randrange(length)
+    result = []
+    for i in range(length):
+        result.append(first_element + i * step)
+    pr_perfect_answer = result.pop(index_question)
+    result.insert(index_question, '..')
+    pr_question = 'Question: '
+    pr_question += ' '.join([str(x) for x in result])
+    return pr_question, pr_perfect_answer
