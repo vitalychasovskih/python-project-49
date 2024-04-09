@@ -1,35 +1,14 @@
-from brain_games.cli import welcom_user
-from brain_games.engine import show_description, show_question
-from brain_games.engine import cheking_the_answer
-from brain_games.engine import br_even
-from brain_games.constants import NUMBER_OF_ROUNDS
+import random
 
 
-print('Welcome to the Brain Games!')
-name = welcom_user()
+def description():
+    even_description = 'Answer "yes" if the number is even, '
+    even_description += 'otherwise answer "no".'
+    return even_description
 
 
-def is_number_even():
-    description, question, perfect_answer = br_even()
-    show_description(description)
-    counter = 0
-    flag = True
-    while counter < NUMBER_OF_ROUNDS:
-        description, question, perfect_answer = br_even()
-        show_question(question)
-        answer = input('Your answer: ')
-        chek = cheking_the_answer(answer, perfect_answer)
-        if chek:
-            print("Correct!")
-            counter += 1
-        else:
-            flag = False
-            lost_message = (
-                f"'{answer}' is wrong answer ;(. "
-                f"Correct answer was '{perfect_answer}'."
-            )
-            print(lost_message)
-            print(f"Let's try again, {name}!")
-            break
-    if flag:
-        print(f"Congratulations, {name}!")
+def logic():
+    number = random.randrange(100)
+    even_perfect_answer = 'yes' if number % 2 == 0 else 'no'
+    even_question = f'Question: {number}'
+    return even_question, even_perfect_answer
