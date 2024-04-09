@@ -19,4 +19,4 @@ def logic():
     else:
         calc_perfect_answer = number_1 * number_2
         calc_question = f'Question: {number_1} * {number_2}'
-    return calc_question, calc_perfect_answer
+    return calc_question, str(calc_perfect_answer)
