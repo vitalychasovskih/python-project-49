@@ -1,35 +1,19 @@
-from brain_games.cli import welcom_user
-from brain_games.engine import show_description, show_question
-from brain_games.engine import cheking_the_answer
-from brain_games.engine import br_gcd
-from brain_games.constants import NUMBER_OF_ROUNDS
+import random
 
 
-print('Welcome to the Brain Games!')
-name = welcom_user()
+def description():
+    gcd_description = 'Find the greatest common divisor of given numbers.'
+    return gcd_description
 
 
-def gcd():
-    description, question, perfect_answer = br_gcd()
-    show_description(description)
-    counter = 0
-    flag = True
-    while counter < NUMBER_OF_ROUNDS:
-        description, question, perfect_answer = br_gcd()
-        show_question(question)
-        answer = int(input('Your answer: '))
-        chek = cheking_the_answer(answer, perfect_answer)
-        if chek:
-            print("Correct!")
-            counter += 1
+def logic():
+    number_1 = random.randrange(100)
+    number_2 = random.randrange(100)
+    gcd_question = f'Question: {number_1} {number_2}'
+    while number_1 != 0 and number_2 != 0:
+        if number_1 > number_2:
+            number_1 = number_1 % number_2
         else:
-            flag = False
-            lost_message = (
-                f"'{answer}' is wrong answer ;(. "
-                f"Correct answer was '{perfect_answer}'."
-            )
-            print(lost_message)
-            print(f"Let's try again, {name}!")
-            break
-    if flag:
-        print(f"Congratulations, {name}!")
+            number_2 = number_2 % number_1
+    gcd_perfect_answer = number_1 + number_2
+    return gcd_question, gcd_perfect_answer
