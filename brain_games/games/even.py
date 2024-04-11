@@ -1,10 +1,7 @@
 import random
 
 
-def description():
-    even_description = 'Answer "yes" if the number is even, '
-    even_description += 'otherwise answer "no".'
-    return even_description
+description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def logic():

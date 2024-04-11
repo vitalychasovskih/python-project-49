@@ -1,9 +1,7 @@
 import random
 
 
-def description():
-    gcd_description = 'Find the greatest common divisor of given numbers.'
-    return gcd_description
+description = 'Find the greatest common divisor of given numbers.'
 
 
 def logic():

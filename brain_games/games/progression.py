@@ -1,9 +1,7 @@
 import random
 
 
-def description():
-    pr_description = 'What number is missing in the progression?'
-    return pr_description
+description = 'What number is missing in the progression?'
 
 
 def logic():

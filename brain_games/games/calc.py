@@ -1,9 +1,7 @@
 import random
 
 
-def description():
-    calc_description = 'What is the result of the expression?'
-    return calc_description
+description = 'What is the result of the expression?'
 
 
 def logic():
