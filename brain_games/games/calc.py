@@ -10,11 +10,11 @@ def logic():
     operator = random.randrange(1, 4)
     if operator == 1:
         calc_perfect_answer = number_1 + number_2
-        calc_question = f'Question: {number_1} + {number_2}'
+        question = f'{number_1} + {number_2}'
     elif operator == 2:
         calc_perfect_answer = number_1 - number_2
-        calc_question = f'Question: {number_1} - {number_2}'
+        question = f'{number_1} - {number_2}'
     else:
         calc_perfect_answer = number_1 * number_2
-        calc_question = f'Question: {number_1} * {number_2}'
-    return calc_question, str(calc_perfect_answer)
+        question = f'{number_1} * {number_2}'
+    return question, str(calc_perfect_answer)

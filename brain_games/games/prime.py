@@ -21,5 +21,5 @@ def logic():
         prime_perfect_answer = 'yes'
     else:
         prime_perfect_answer = 'no'
-    prime_question = f'Question: {number}'
-    return prime_question, prime_perfect_answer
+    question = f'{number}'
+    return question, prime_perfect_answer

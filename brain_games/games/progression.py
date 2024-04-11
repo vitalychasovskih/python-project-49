@@ -14,6 +14,5 @@ def logic():
         result.append(first_element + i * step)
     pr_perfect_answer = result.pop(index_question)
     result.insert(index_question, '..')
-    pr_question = 'Question: '
-    pr_question += ' '.join([str(x) for x in result])
-    return pr_question, str(pr_perfect_answer)
+    question = ' '.join([str(x) for x in result])
+    return question, str(pr_perfect_answer)
