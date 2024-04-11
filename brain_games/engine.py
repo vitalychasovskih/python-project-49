@@ -10,7 +10,7 @@ def brain_engine(game):
     flag = True
     while counter < NUMBER_OF_ROUNDS:
         question, perfect_answer = game.logic()
-        print('Question: ', question)
+        print(f'Question: {question}')
         answer = input('Your answer: ')
         if answer == perfect_answer:
             print("Correct!")
