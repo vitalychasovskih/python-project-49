@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, randrange
 
 
 description = 'What number is missing in the progression?'
@@ -24,7 +24,7 @@ def make_question(progression, index_question):
 
 def logic():
     progression = make_progression()
-    index_question = random.randrange(len(progression))
+    index_question = randrange(len(progression))
     question = make_question(progression, index_question)
     pr_perfect_answer = str(progression[index_question])
     return question, pr_perfect_answer
