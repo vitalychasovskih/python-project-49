@@ -1,5 +1,4 @@
 from brain_games.cli import welcom_user
-from brain_games.constants import NUMBER_OF_ROUNDS
 
 
 def brain_engine(game):
@@ -8,7 +7,8 @@ def brain_engine(game):
     print(game.description)
     counter = 0
     flag = True
-    while counter < NUMBER_OF_ROUNDS:
+    number_of_rounds = 3
+    while counter < number_of_rounds:
         question, perfect_answer = game.logic()
         print(f'Question: {question}')
         answer = input('Your answer: ')
@@ -17,11 +17,11 @@ def brain_engine(game):
             counter += 1
         else:
             flag = False
-            lost_message = (
+            print(
                 f"'{answer}' is wrong answer ;(. "
                 f"Correct answer was '{perfect_answer}'."
             )
-            print(lost_message)
+            # print(lost_message)
             print(f"Let's try again, {name}!")
             break
     if flag:
