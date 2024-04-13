@@ -1,4 +1,4 @@
-import random
+from random import randrange
 
 
 description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
@@ -16,7 +16,7 @@ def is_prime(n):
 
 
 def logic():
-    number = random.randrange(100)
+    number = randrange(100)
     if is_prime(number):
         prime_perfect_answer = 'yes'
     else:

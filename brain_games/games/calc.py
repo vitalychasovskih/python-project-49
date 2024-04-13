@@ -1,13 +1,13 @@
-import random
+from random import randrange
 
 
 description = 'What is the result of the expression?'
 
 
 def logic():
-    number_1 = random.randrange(100)
-    number_2 = random.randrange(100)
-    operator = random.randrange(1, 4)
+    number_1 = randrange(100)
+    number_2 = randrange(100)
+    operator = randrange(1, 4)
     if operator == 1:
         calc_perfect_answer = number_1 + number_2
         question = f'{number_1} + {number_2}'

@@ -1,13 +1,13 @@
-import random
+from random import randint
 
 
 description = 'What number is missing in the progression?'
 
 
 def make_progression():
-    length = random.randint(5, 10)
-    first_element = random.randint(1, 20)
-    step = random.randint(2, 7)
+    length = randint(5, 10)
+    first_element = randint(1, 20)
+    step = randint(2, 7)
     progression = []
     for i in range(length):
         progression.append(first_element + i * step)
