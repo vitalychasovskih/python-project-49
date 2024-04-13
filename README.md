@@ -220,10 +220,10 @@ Correct!
 
 ### Dev Dependencies
 
-* flake8 = "^6.0.0"
+* flake8 = "^7.0.0"
 
 ---
 
 This is the first training project of the ["Python Developer"](https://ru.hexlet.io/programs/python) course on [Hexlet.io](https://hexlet.io)
 
-> GitHub [@Vitaly Сhasovskih](https://github.com/vitalychasovskih) &nbsp;&middot;&nbsp;
+> GitHub [@Vitaly Сhasovskih](https://github.com/vitalychasovskih)
