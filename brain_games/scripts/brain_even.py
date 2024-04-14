@@ -4,7 +4,7 @@ import brain_games.games.even
 
 
 def main():
-    """Runs code for the brain-even command."""
+    """Run code for the brain-even command."""
     brain_engine(brain_games.games.even)
 
 

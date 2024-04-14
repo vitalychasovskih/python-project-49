@@ -4,7 +4,7 @@ import brain_games.games.prime
 
 
 def main():
-    """Runs code for the brain-prime command."""
+    """Run code for the brain-prime command."""
     brain_engine(brain_games.games.prime)
 
 
