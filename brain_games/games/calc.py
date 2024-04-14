@@ -4,6 +4,10 @@ description = 'What is the result of the expression?'
 
 
 def logic():
+    """
+    Create two random numbers, chose a random operator,
+    create and return a question and the expected answer.
+    """
     number_1 = randrange(100)
     number_2 = randrange(100)
     operator = randrange(1, 4)
