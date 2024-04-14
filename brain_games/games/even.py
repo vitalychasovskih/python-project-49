@@ -1,6 +1,5 @@
 from random import randrange
 
-
 description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 

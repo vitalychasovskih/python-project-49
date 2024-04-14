@@ -1,6 +1,5 @@
 from random import randrange
 
-
 description = 'What is the result of the expression?'
 
 
