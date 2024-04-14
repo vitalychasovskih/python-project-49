@@ -136,7 +136,7 @@ Your answer: 75
 Correct!
 ```
 
-<a href="https://asciinema.org/a/650934" target="_blank"><img src="https://asciinema.org/a/650934.svg" width="300"/></a>
+<a href="https://asciinema.org/a/654110" target="_blank"><img src="https://asciinema.org/a/654110.svg" width="300"/></a>
 
 ### _Brain GCD_
 
