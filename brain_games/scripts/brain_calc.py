@@ -4,6 +4,7 @@ import brain_games.games.calc
 
 
 def main():
+    """Runs code for the brain-calc command."""
     brain_engine(brain_games.games.calc)
 
 

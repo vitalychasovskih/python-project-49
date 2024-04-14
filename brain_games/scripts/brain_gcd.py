@@ -4,6 +4,7 @@ import brain_games.games.gcd
 
 
 def main():
+    """Runs code for the brain-gcd command."""
     brain_engine(brain_games.games.gcd)
 
 
