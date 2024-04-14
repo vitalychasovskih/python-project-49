@@ -22,7 +22,7 @@ def is_prime(n):
 
 def logic():
     """
-    Create a number, create a question and the expected answer.
+    Create a number, create and return a question and the expected answer.
     """
     number = randrange(100)
     if is_prime(number):
