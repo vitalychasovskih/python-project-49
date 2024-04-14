@@ -5,7 +5,7 @@ description = 'What number is missing in the progression?'
 
 def make_progression():
     """
-    Returns a progression of random length
+    Return a progression of random length
     with a random first element and a random step.
     """
     length = randint(5, 10)
@@ -19,7 +19,7 @@ def make_progression():
 
 def make_question(progression, index_question):
     """
-    Constructs and returns a question
+    Construct and return a question
     based on the progression and index of the missing element.
 
     Args:
