@@ -35,7 +35,7 @@ def make_question(progression, index_question):
 
 def logic():
     """
-    Creates a progression, selects a random element, creates a question
+    Create a progression, select a random element, create a question
     and the expected answer.
     """
     progression = make_progression()
