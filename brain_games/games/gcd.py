@@ -5,6 +5,10 @@ description = 'Find the greatest common divisor of given numbers.'
 
 
 def logic():
+    """
+    Create two random numbers, create and return a question and the expected
+    answer.
+    """
     number_1 = randrange(100)
     number_2 = randrange(100)
     question = f'{number_1} {number_2}'
