@@ -8,8 +8,10 @@ def logic():
     Create two random numbers, chose a random operator,
     create and return a question and the expected answer.
     """
-    number_1 = randrange(100)
-    number_2 = randrange(100)
+    number_1 = randrange(50)
+    number_2 = randrange(10)
+    if number_1 < number_2:
+        number_1, number_2 = number_2, number_1
     operator = choice(['+', '-', '*'])
     question = f'{number_1} {operator} {number_2}'
     calc_perfect_answer = eval(question)
