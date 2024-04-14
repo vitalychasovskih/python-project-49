@@ -21,7 +21,6 @@ def brain_engine(game):
                 f"'{answer}' is wrong answer ;(. "
                 f"Correct answer was '{perfect_answer}'."
             )
-            # print(lost_message)
             print(f"Let's try again, {name}!")
             break
     if flag:
