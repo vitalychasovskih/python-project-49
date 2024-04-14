@@ -1,9 +1,9 @@
-from brain_games.cli import welcom_user
+from brain_games.cli import welcome_user
 
 
 def brain_engine(game):
     print('Welcome to the Brain Games!')
-    name = welcom_user()
+    name = welcome_user()
     print(game.description)
     counter = 0
     flag = True
