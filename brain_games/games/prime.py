@@ -4,6 +4,12 @@ description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(n):
+    """
+    Return True if n is prime and False otherwise.
+
+    Args:
+        n: int
+    """
     if n == 1:
         return False
     if n % 2 == 0:
@@ -15,6 +21,9 @@ def is_prime(n):
 
 
 def logic():
+    """
+    Create a number, creates a question and the expected answer.
+    """
     number = randrange(100)
     if is_prime(number):
         prime_perfect_answer = 'yes'
