@@ -4,7 +4,7 @@ from math import gcd
 description = 'Find the greatest common divisor of given numbers.'
 
 
-def logic():
+def make_question_and_answer():
     """
     Create two random numbers, create and return a question and the expected
     answer.

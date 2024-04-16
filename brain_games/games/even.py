@@ -3,7 +3,7 @@ from random import randrange
 description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def logic():
+def make_question_and_answer():
     """
     Create a number, create and return a question and the expected answer.
     """

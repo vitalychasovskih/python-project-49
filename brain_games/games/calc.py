@@ -3,10 +3,11 @@ from random import randrange, choice
 description = 'What is the result of the expression?'
 
 
-def logic():
+def make_question_and_answer():
     """
     Create two random numbers, chose a random operator,
-    create and return a question and the expected answer.
+    create and return a quest
+    ion and the expected answer.
     """
     number_1 = randrange(50)
     number_2 = randrange(10)

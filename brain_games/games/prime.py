@@ -20,7 +20,7 @@ def is_prime(n):
     return d * d > n
 
 
-def logic():
+def make_question_and_answer():
     """
     Create a number, create and return a question and the expected answer.
     """
