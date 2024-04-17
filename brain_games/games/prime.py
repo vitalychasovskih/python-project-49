@@ -1,6 +1,7 @@
 from random import randrange
 
 description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+MAX_NUMBER = 100
 
 
 def is_prime(n):
@@ -20,14 +21,14 @@ def is_prime(n):
     return d * d > n
 
 
-def make_question_and_answer():
+def make_question_and_perfect_answer():
     """
     Create a number, create and return a question and the expected answer.
     """
-    number = randrange(100)
+    number = randrange(MAX_NUMBER)
     if is_prime(number):
-        prime_perfect_answer = 'yes'
+        perfect_answer = 'yes'
     else:
-        prime_perfect_answer = 'no'
+        perfect_answer = 'no'
     question = f'{number}'
-    return question, prime_perfect_answer
+    return question, perfect_answer

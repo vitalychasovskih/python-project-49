@@ -9,7 +9,7 @@ def start_game(game):
     flag = True
     number_of_rounds = 3
     while counter < number_of_rounds:
-        question, perfect_answer = game.make_question_and_answer()
+        question, perfect_answer = game.make_question_and_perfect_answer()
         print(f'Question: {question}')
         answer = input('Your answer: ')
         if answer == perfect_answer:

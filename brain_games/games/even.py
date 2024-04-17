@@ -1,13 +1,14 @@
 from random import randrange
 
 description = 'Answer "yes" if the number is even, otherwise answer "no".'
+MAX_NUMBER = 100
 
 
-def make_question_and_answer():
+def make_question_and_perfect_answer():
     """
     Create a number, create and return a question and the expected answer.
     """
-    number = randrange(100)
-    even_perfect_answer = 'yes' if number % 2 == 0 else 'no'
+    number = randrange(MAX_NUMBER)
+    perfect_answer = 'yes' if number % 2 == 0 else 'no'
     question = f'{number}'
-    return question, even_perfect_answer
+    return question, perfect_answer
