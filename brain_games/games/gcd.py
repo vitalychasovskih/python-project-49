@@ -1,7 +1,7 @@
 from random import randrange
 from math import gcd
 
-description = 'Find the greatest common divisor of given numbers.'
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 MAX_NUMBER = 100
 
 

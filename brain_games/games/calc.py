@@ -1,6 +1,6 @@
 from random import randrange, choice
 
-description = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
 MAX_ARGUMENT_1 = 50
 MAX_ARGUMENT_2 = 10
 

@@ -4,7 +4,7 @@ from brain_games.cli import welcome_user
 def start_game(game):
     print('Welcome to the Brain Games!')
     name = welcome_user()
-    print(game.description)
+    print(game.DESCRIPTION)
     counter = 0
     flag = True
     number_of_rounds = 3

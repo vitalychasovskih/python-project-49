@@ -1,6 +1,6 @@
 from random import randrange
 
-description = 'Answer "yes" if the number is even, otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 MAX_NUMBER = 100
 
 

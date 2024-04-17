@@ -1,6 +1,6 @@
 from random import randint, randrange
 
-description = 'What number is missing in the progression?'
+DESCRIPTION = 'What number is missing in the progression?'
 NIN_LENGTH = 5
 MAX_LENGTH = 10
 MIN_FIRST = 1
