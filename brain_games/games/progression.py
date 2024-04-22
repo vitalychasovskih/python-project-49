@@ -34,8 +34,7 @@ def construct_question(progression, index_question):
         index_question: int
     """
     progression_for_question = progression.copy()
-    progression_for_question.pop(index_question)
-    progression_for_question.insert(index_question, '..')
+    progression_for_question[index_question] = '..'
     question = ' '.join([str(x) for x in progression_for_question])
     return question
 
