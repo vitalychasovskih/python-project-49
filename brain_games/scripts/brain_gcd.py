@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-from brain_games.engine import start_game
+from brain_games.engine import start
 import brain_games.games.gcd
 
 
 def main():
     """Run code for the brain-gcd command."""
-    start_game(brain_games.games.gcd)
+    start(brain_games.games.gcd)
 
 
 if __name__ == '__main__':

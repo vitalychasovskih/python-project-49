@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-from brain_games.engine import start_game
+from brain_games.engine import start
 import brain_games.games.progression
 
 
 def main():
     """Run code for the brain-progression command."""
-    start_game(brain_games.games.progression)
+    start(brain_games.games.progression)
 
 
 if __name__ == '__main__':

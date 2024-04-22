@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-from brain_games.engine import start_game
+from brain_games.engine import start
 import brain_games.games.even
 
 
 def main():
     """Run code for the brain-even command."""
-    start_game(brain_games.games.even)
+    start(brain_games.games.even)
 
 
 if __name__ == '__main__':
